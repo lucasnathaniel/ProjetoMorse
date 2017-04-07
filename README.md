@@ -4,7 +4,7 @@ O objetivo deste trabalho é implementar um programa de codificação e decodifi
 # Compilação
 
 ```
-$ make
+$ cd bin/ && make && cd ..
 ```
 
 # Uso
