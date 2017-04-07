@@ -1,6 +1,8 @@
 #include <iostream>
 #include "main.h"
 
+using namespace std;
+
 int main(){
 
 cout << " .___  ___.   ______   .______          _______. _______    " << endl;
