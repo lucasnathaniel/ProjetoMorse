@@ -1,13 +1,8 @@
-#include <iostream>
-#include <fstream>
-#include <string>
-#include <vector>
-
-using namespace std;
+#include "escrever_banco.h"
 
 //****CODIGO NÃO IMPLEMENTADO****
 
-void escrever_banco(vector<string> palavras,string arquivo){
+void escrever_banco(vector<string> palavras, string arquivo){
 
     string line;
     ofstream banco(arquivo);

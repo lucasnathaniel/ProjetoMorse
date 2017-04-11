@@ -1,5 +1,13 @@
 #ifndef __MAIN_H__
 #define __MAIN_H__
-using namespace std;
 
-#endif /*__MAIN_H__*/
+using namespace std;
+#include <iostream>
+#include <vector>
+
+#include "escrever_banco.h"
+#include "ler_banco.h"
+#include "translate_to_alfa.h" 
+#include "translate_to_morse.cpp"
+
+#endif

@@ -1,12 +1,8 @@
-#include <iostream>
-#include <vector>
 #include "main.h"
-
-using namespace std;
 
 int main(){
 int num; 
-bool laco = true;
+bool laco;
 string endereco;
 vector<string> palavras;
 

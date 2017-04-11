@@ -1,10 +1,4 @@
-#include <iostream>
-#include <fstream>
-#include <sstream>
-#include <string>
-#include <vector>
-
-using namespace std;
+#include "ler_banco.h"
 
 //Funcão da internet http://www.arquivodecodigos.net/dicas/2-como-quebrar-separar-uma-string-usando-ponto-e-virgula-como-delimitador-1301.html
 //Recebe uma strings, um char delimitador e um vetor de strings vazio
