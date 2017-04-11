@@ -1,3 +1,4 @@
+#include "translate_to_alfa.h"
 /**
 strings de mesma posição para facilitar a tradução
 */

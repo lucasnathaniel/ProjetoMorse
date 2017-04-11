@@ -1,3 +1,4 @@
+#include "translate_to_morse.h"
 /**
 strings de mesma posição para facilitar a tradução
 */
