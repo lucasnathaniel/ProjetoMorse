@@ -7,8 +7,8 @@ using namespace std;
 #include <vector>
 #include <string>
 
-int buscar(string, string[]);
-int buscar(char, string[]);
+int buscar(string, string[], unsigned int);
+int buscar(char , char[], unsigned int);
 
 
 #endif

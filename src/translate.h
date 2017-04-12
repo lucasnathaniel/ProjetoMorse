@@ -1,15 +1,15 @@
-#ifndef __TRANSLATE_TO_ALFA_H__
-#define __TRANSLATE_TO_ALFA_H__
+#ifndef __TRANSLATE_H__
+#define __TRANSLATE_H__
 
 #include <iostream>
-#include <fstream>
-#include <sstream>
 #include <string>
 #include <vector>
+#include <sstream>
 #include "buscar.h"
 
 using namespace std;
 
 string translate_to_alfa(vector<string>&);
+//string translate_to_morse(vector<string>&);
 
 #endif

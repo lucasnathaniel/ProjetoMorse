@@ -7,7 +7,6 @@ using namespace std;
 
 #include "escrever_banco.h"
 #include "ler_banco.h"
-#include "translate_to_alfa.h" 
-#include "translate_to_morse.cpp"
+#include "translate.h"
 
 #endif
