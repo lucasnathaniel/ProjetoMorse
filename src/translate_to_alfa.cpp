@@ -20,12 +20,11 @@ string translate_to_alfa(vector<string>& txt_morse){
 int posicao;
 string texto;
 
-       for(int i = 0; txt_morse.size() > i; i++){
-         for(int j = 0; txt_morse[i].size() > i; i++){
-           if(txt_morse[i].compare("\\")){
+       for(unsigned int i = 0; txt_morse.size() > i; i++){
+           if(txt_morse[i].compare("\\") == 0){
              texto += " ";
            }
-           if(txt_morse[i].compare('\n')){
+           if(txt_morse[i].compare("\n") == 0){
              texto += '\n';
            }
            if(buscar(txt_morse[i], alfa_morse)){
@@ -44,7 +43,6 @@ string texto;
              cout << "Um dos caracteres do texto não pode ser traduzido" << endl;
              exit(0);
            }
-         }
-       }
+      }
        return texto;
 }

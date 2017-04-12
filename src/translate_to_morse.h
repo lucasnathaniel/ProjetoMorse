@@ -6,6 +6,7 @@
 #include <sstream>
 #include <string>
 #include <vector>
+#include "buscar.h"
 
 using namespace std;
 string translate_to_morse(vector<string>&);

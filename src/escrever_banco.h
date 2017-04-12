@@ -9,6 +9,6 @@
 
 using namespace std;
 
-void escrever_banco(vector<string>, string);
+void escrever_banco(string, string);
 
 #endif

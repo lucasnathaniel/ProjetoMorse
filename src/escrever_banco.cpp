@@ -2,17 +2,13 @@
 
 //****CODIGO NÃO IMPLEMENTADO****
 
-void escrever_banco(vector<string> palavras, string arquivo){
+void escrever_banco(string endereco, string arquivo){
 
-    string line;
-    ofstream banco(arquivo);
+    ofstream banco(endereco);
 
     if(!banco) {cout << "Arquivo não foi aberto" << endl;}
 
-     if (banco.is_open()){
-        for(int i = 0; palavras.size() > i; i++){
-        banco << palavras[i];
-    	}
-     }
-        banco.close();
-    }
+    banco << arquivo;
+
+    banco.close();
+}

@@ -33,9 +33,9 @@ cin >> endereco;
 palavras = ler_banco(palavras, endereco);
 
 if(num == 1)
-	escrever_banco(translate_to_morse(palavras));
+	escrever_banco(endereco, translate_to_morse(palavras));
 if(num == 2)
-	escrever_banco(translate_to_alfa(palavras));
+	escrever_banco(endereco, translate_to_alfa(palavras));
 
 cout << "O arquivo foi gerado com o mesmo nome na pasta de saida";
 

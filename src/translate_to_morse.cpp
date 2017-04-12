@@ -20,24 +20,25 @@ string translate_to_morse(vector<string>& txt_alfa){
 int posicao;
 string texto;
 
-       for(int i = 0; txt_alfa.size() > i; i++){
-         for(int j = 0; txt_alfa[i].size() > i; i++){
-           if(txt_alfa[i][j].compare(" ")){
+       for(unsigned int i = 0; txt_alfa.size() > i; i++){
+         for(unsigned int j = 0; txt_alfa[i].size() > i; i++){
+           char ch = txt_alfa[i][j];
+           if(ch == ' '){
              texto += "\\";
            }
-           if(txt_alfa[i][j].compare('\n')){
+           if(ch =='\n'){
              texto += '\n';
            }
-           if(buscar(txt_alfa[i][j], alfa_alfa)){
-              posicao = buscar(txt_alfa[i][j], alfa_alfa);
+           if(buscar(ch, alfa_alfa)){
+              posicao = buscar(ch, alfa_alfa);
               texto += alfa_morse[posicao];
 
-           } else if(buscar(txt_alfa[i][j], num_alfa)){
-             posicao = buscar(txt_alfa[i][j], num_alfa);
+           } else if(buscar(ch, num_alfa)){
+             posicao = buscar(ch, num_alfa);
              texto += num_morse[posicao];
 
-           } else if(buscar(txt_alfa[i][j], esp_alfa)){
-             posicao = buscar(txt_alfa[i][j], esp_alfa);
+           } else if(buscar(ch, esp_alfa)){
+             posicao = buscar(ch, esp_alfa);
              texto += esp_morse[posicao];
 
            } else {

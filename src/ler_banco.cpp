@@ -24,13 +24,12 @@ vector<string> ler_banco(vector<string> palavras, string arquivo){
     string line;
     string retorno;
     ifstream banco(arquivo);
-    int linhas = 0;
 
     if(!banco) {cout << "Arquivo não foi aberto e/ou encontrado" << endl; exit(0);}
 
     if (banco.is_open()){
 
-        while(get_line(banco, line)){
+        while(getline(banco, line)){
            separar(line,' ',palavras);
         }
     
