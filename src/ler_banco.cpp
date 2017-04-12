@@ -36,7 +36,5 @@ vector<string> ler_banco(vector<string> palavras, string arquivo){
      banco.close();
     
     }
-
     return palavras;
-
 }

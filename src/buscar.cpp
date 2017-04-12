@@ -1,7 +1,6 @@
 #include "buscar.h"
 
 
-
 int buscar(string key, string vetor[], unsigned int tamanho){
 	
 	for(unsigned int i = 0; i < tamanho; i++){

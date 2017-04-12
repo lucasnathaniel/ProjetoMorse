@@ -2,9 +2,7 @@
 
 
 int main(){
-	int num;
-	string endereco;
-	vector<string> palavras;
+	system("clear");
 	cout << "                              \033[31m .___  ___.   ______   .______          _______. _______    " << endl;
 	cout << "                               |   \\/   |  /  __  \\  |   _  \\        /       ||   ____|" << endl;
 	cout << "                               |  \\  /  | |  |  |  | |  |_)  |      |   (----`|  |__     " << endl;
@@ -17,25 +15,33 @@ int main(){
 	cout << "    |  |     |      /      /  /_\\  \\   |  . `  |     \\   \\    |  |      /  /_\\  \\    |  |     |  |  |  | |      /       " << endl;
 	cout << "    |  |     |  |\\  \\----./  _____  \\  |  |\\   | .----)   |   |  `----./  _____  \\   |  |     |  `--'  | |  |\\  \\----. " << endl;
 	cout << "    |__|     |__| `._____/__/     \\__\\ |__| \\__| |_______/    |_______/__/     \\__\\  |__|      \\______/  |__| `._____|  \033[0m" << endl;
+	
 
+	int num;
+	string nome_do_arquivo;
+	string saida = string("../saida/saida.txt");
+	vector<string> palavras;
+
+	cout << "Digite o tipo de operação:"<< endl;
+	cout << "(1) para alfabetico-morse (2) para morse-alfabetico" << endl;
 	while(1){
-		cout << "Digite o tipo de operação: 1 para alfabico-morse e 2 para morse-alfabetico" << endl;
-		cin >> num; 
-		if(num != 1 || num != 2) {cout << "Voce digitou um numero errado..." << endl;}
+		cin >> num;
+		if(num == 1 || num == 2) break;
 	}
 
-	cout << "Digite o nome do arquivo com sua extensao. Ex: exemplo.txt" << endl;
-	cout << "Se o arquivo nao estiver na pasta do programa todas as operacoes serao finalizadas." << endl;
-	cin >> endereco;
-
+	cout << "Digite o nome do arquivo." << endl;
+	
+	cin >> nome_do_arquivo;
+	string endereco = string("../entrada/") + nome_do_arquivo + string(".txt");
 	palavras = ler_banco(palavras, endereco);
 
-	if(num == 1)
-		escrever_banco(endereco, translate_to_morse(palavras));
-	if(num == 2)
-		escrever_banco(endereco, translate_to_alfa(palavras));
-
-	cout << "O arquivo foi gerado com o mesmo nome na pasta de saida";
+	if(num == 1){
+		escrever_banco(saida, translate_to_morse(palavras));
+	}
+	if(num == 2){
+		escrever_banco(saida, translate_to_alfa(palavras));
+	}
+	cout << "Sucesso!" << endl;
 
 	return 0;
 }

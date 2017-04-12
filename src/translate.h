@@ -10,6 +10,6 @@
 using namespace std;
 
 string translate_to_alfa(vector<string>&);
-//string translate_to_morse(vector<string>&);
+string translate_to_morse(vector<string>&);
 
 #endif

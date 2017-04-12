@@ -4,9 +4,12 @@
 
 void escrever_banco(string endereco, string arquivo){
 
+
     ofstream banco(endereco);
 
-    if(!banco) {cout << "Arquivo não foi aberto" << endl;}
+    if(!banco){
+    	cout << "Arquivo não foi aberto" << endl;
+	}
 
     banco << arquivo;
 

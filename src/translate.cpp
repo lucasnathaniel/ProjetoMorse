@@ -22,17 +22,14 @@ string esp_morse[19] = {".-.-.-","--..--","..--..",".----.","-.-.--","-..-.","-.
 
 string translate_to_alfa(vector<string>& txt_morse){
 
-int posicao;
-string texto;
-
+  int posicao;
+  string texto;
        for(unsigned int i = 0; txt_morse.size() > i; i++){
            if(txt_morse[i].compare("\\") == 0){
              texto += " ";
-           }
-           if(txt_morse[i].compare("\n") == 0){
-             texto += '\n';
-           }
-           if(buscar(txt_morse[i], alfa_morse, 26)){
+           } else if(txt_morse[i].compare("\n") == 0){
+             texto += "\n";
+           } else if(buscar(txt_morse[i], alfa_morse, 26)){
               posicao = buscar(txt_morse[i], alfa_morse, 26);
               texto += alfa_alfa[posicao-1];
 
@@ -45,7 +42,7 @@ string texto;
              texto += esp_alfa[posicao-1];
 
            } else {
-             if(txt_morse[i] == ".---..-"){
+       /*      if(txt_morse[i] == ".---..-"){
               texto += "á";
              }else if(txt_morse[i] == ".---.-.---"){
               texto += "à";
@@ -65,12 +62,10 @@ string texto;
               texto += "ô";
              }else if(txt_morse[i] == ".---..."){
               texto += "ú";
-             }else{
-             cout << "Um dos caracteres do texto não pode ser traduzido" << endl;
-             exit(0);
-        }
+             }*/
       }
     }
+    cout << texto << endl;
   return texto;
 }
 
@@ -80,9 +75,8 @@ string translate_to_morse(vector<string>& txt_alfa){
 
 int posicao;
 string texto;
-
        for(unsigned int i = 0; txt_alfa.size() > i; i++){
-         for(unsigned int j = 0; txt_alfa[i].size() > i; i++){
+         for(unsigned int j = 0; txt_alfa[i].size() > j; j++){
            char ch = txt_alfa[i][j];
            if(ch == ' '){
              texto += "\\";
@@ -102,7 +96,7 @@ string texto;
              posicao = buscar(ch, esp_alfa, 17);
              texto += esp_morse[posicao-1];
 
-           }else {
+           /*}else {
             stringstream ss;
             string s;
             ss << ch;
@@ -112,6 +106,7 @@ string texto;
              }else if(s == "à"){
               texto += ".---.-.---";
              }else if(s == "ã"){
+              cout << "irru" << endl;
               texto += ".---.-.";
              }else if(s == "é"){
               texto += ".---.-.-";
@@ -126,13 +121,14 @@ string texto;
              }else if(s == "ô"){
               texto += ".---..";
              }else if(s == "ú"){
-              texto += ".---...";
+              texto += ".---..."; */
              }else{
-             cout << "Um dos caracteres do texto não pode ser traduzido" << endl;
+             cout << "Um dos caracteres do texto não pode ser traduzido, e esse caracter é: "<< ch << endl;
              exit(0);
            }
-         }
+        texto += " ";
       }
+      texto += "\\ "; 
   }
   return texto;
 }
