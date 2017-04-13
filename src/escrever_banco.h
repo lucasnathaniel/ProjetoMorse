@@ -1,3 +1,8 @@
+/**
+  *@file escrever_banco.h
+  *@brief arquivo com as declaracoes das funcoes de escrita de banco
+  */
+
 #ifndef __LER_BANCO_H__
 #define __LER_BANCO_H__
 

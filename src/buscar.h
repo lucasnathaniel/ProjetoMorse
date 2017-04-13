@@ -1,3 +1,8 @@
+/**
+  *@file buscarp.h
+  *@brief arquivo com as declaracoes das funcoes de busca
+  */
+
 #ifndef _BUSCAR_H_
 #define _BUSCAR_H_ 
 

@@ -1,0 +1,5 @@
+<map id="translate.h" name="translate.h">
+<area shape="rect" id="node2" href="$main_8h.html" title="arquivo necessario para importar as funcoes necessarias " alt="" coords="12,80,73,107"/>
+<area shape="rect" id="node4" href="$translate_8cpp.html" title="arquivo com as funcoes de traducao " alt="" coords="98,80,195,107"/>
+<area shape="rect" id="node3" href="$main_8cpp.html" title="principal funcao do programa, administra a leitura, processamento e saida dos codigos em morse ..." alt="" coords="5,155,80,181"/>
+</map>

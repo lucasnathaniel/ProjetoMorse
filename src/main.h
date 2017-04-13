@@ -1,3 +1,8 @@
+/**
+  *@file main.h
+  *@brief arquivo necessario para importar as funcoes necessarias
+  */
+
 #ifndef __MAIN_H__
 #define __MAIN_H__
 

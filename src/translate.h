@@ -1,3 +1,8 @@
+/**
+  *@file translate.h
+  *@brief arquivo com as declaracoes das funcoes de traducao
+  */
+
 #ifndef __TRANSLATE_H__
 #define __TRANSLATE_H__
 

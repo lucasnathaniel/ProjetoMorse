@@ -1,24 +1,29 @@
+/**
+  *@file translate.cpp
+  *@brief arquivo com as funcoes de traducao
+  */
+
 #include "translate.h"
 
-//strings de mesma posição para facilitar a tradução
-
-//string alfa_alfa[26] = {"a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "x", "y", "z"};
-//string num_alfa[10] = {"1","2","3","4","5","6","7","8","9","0"};
+//String composta com as letras em ordem alfabetica.
 char alfa_alfa[26] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'x', 'y', 'z'};
+//String composta de numeros de 1 a 9 e o 0 no fim.
 char num_alfa[10] = {'1','2','3','4','5','6','7','8','9','0'};
-
-//string esp_alfa[19] = {".",",","?","'","!","/","(",")","&",":",";","=","-","_","\"","$","@","à","é"};
-//á, ã, â, ê, ó, õ, ô no final do vetor
+//String composta de todos os caracteres especiais descritos na tabela do wikipedia.(https://pt.wikipedia.org/wiki/C%C3%B3digo_Morse)
 char esp_alfa[17] = {'.',',','?','\'','!','/','(',')','&',':',';','=','-','_','\"','$','@'};
 
-//String composta com as letras em ordem alfabetica.
+//String composta com as letras em morse em ordem alfabetica.
 string alfa_morse[26] = {".-","-...","-.-.","-..",".","..-.","--.","....","..",".---","-.-",".-..","--","-.","---",".--.","--.-",".-.","...","-","..-","...-",".--","-..-","-.--","--.."};
-//String composta de numeros de 1 a 9 e o 0 no fim.
+//String composta com os numeros em morse.
 string num_morse[10] = {".----","..---","...--","....-",".....","-....","--...","---..","----.","-----"};
-//String composta de todos os caracteres especiais descritos na tabela do wikipedia.(https://pt.wikipedia.org/wiki/C%C3%B3digo_Morse)
-//Os ultimos dois digitos dessa string abaixo sao "à" e "é".
+//String composta com caracteres especiais em morse.
 string esp_morse[19] = {".-.-.-","--..--","..--..",".----.","-.-.--","-..-.","-.--.","-.--.-",".-...","---...","-.-.-.","-...-","-....-","..--.-",".-..-.","...-..-",".--.-.",".--.-","..-.."};
 
+/**
+  *A funcao recebe o vetor de strings em morse e retorna traduzido, ele separa cada string do vetor e 
+  *vai colocando na string texto, para depois retornar ja traduzido, a funcao buscar é usada para comparar as strings 
+  *os if's comentados foram de caracteres especiais que nao podem ser traduzidos, pois não são chars normais
+  */
 
 string translate_to_alfa(vector<string>& txt_morse){
 
@@ -65,11 +70,15 @@ string translate_to_alfa(vector<string>& txt_morse){
              }*/
       }
     }
-    cout << texto << endl;
+    cout << "Saida: " << texto << endl;
   return texto;
 }
 
-
+/**
+  *A funcao recebe o vetor de chars e retorna traduzido para morse, ele separa cada char do vetor e 
+  *vai colocando na string texto, para depois retornar ja traduzido para morse, a funcao buscar é usada para comparar os chars
+  *os if's comentados foram de caracteres especiais que nao podem ser traduzidos, pois não são chars normais
+  */
 
 string translate_to_morse(vector<string>& txt_alfa){
 
@@ -130,5 +139,6 @@ string texto;
       }
       texto += "\\ "; 
   }
+  cout << "Saida: " << texto << endl;
   return texto;
 }
